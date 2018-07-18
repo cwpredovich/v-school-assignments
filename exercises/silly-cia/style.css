@@ -1,0 +1,20 @@
+#headers {
+    font-family: 'Georgia';
+    text-align: center;
+}
+
+#headline {
+    color: darkgreen;
+}
+
+p {
+    line-height: 25px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+#allUppers {
+    text-transform: uppercase;
+}
