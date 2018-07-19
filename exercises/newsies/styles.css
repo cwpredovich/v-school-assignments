@@ -1,0 +1,45 @@
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    border-bottom: 2px solid blue;
+    padding-bottom: 16px;
+}
+
+article.story1 > p {
+    display: inline-block;
+    font-size: 14px;
+    width: 30%;
+}
+
+article.story1 {
+    border-bottom: 1px solid gray;
+}
+
+.stories2And3 > article {
+    display: inline-block;
+    width: 50%;
+}
+
+#story2 {
+    padding-top: 8px;
+    /* width: 75%; */
+    border-right: 1px solid gray;
+}
+
+.photo-caption {
+    text-align: center;
+    font-style: italic;
+    font-size: 18px;
+}
+
+#story2 > img {
+    width: 98%;
+    height: auto;
+    padding-top: 6px;
+}
+
+#story3 {
+    width: 25%;
+}
