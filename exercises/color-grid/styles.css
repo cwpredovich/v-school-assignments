@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    font-size: 0px;
+}
+
+#totalMargin {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#pink {
+    background-color: #F5C6D6;
+    height: 100px;
+    /* padding: 20px; */
+}
+
+#darkerPink {
+    list-style-type: none;
+    height: 100px;
+    border: 1px solid black;
+    padding: 0;
+}
+
+#darkerPink > li {
+    background-color: #EE2E84;
+    height: 100%;
+    width: 20%;
+    display: inline-block;
+    border: 1px solid black;
+    margin: 
+}
+
+#lightBlue {
+    list-style-type: none;
+    height: 100px;
+}
+
+#lightBlue > li {
+    background-color: #85CFD8;
+}
