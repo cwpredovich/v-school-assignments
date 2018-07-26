@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Travel Plans</h1>
+    <p id="travel-quote">"The world is like a book. Those who don't travel read but one page." <br> - Morgan Reynolds</p>
+    <div id="travel-form">
+        <form name="travel">
+            <div id="name">
+                <input type="text" name="fName" placeholder="First Name">
+                <input type="text" name="lName" placeholder="Last Name">
+            </div>
+            <div id="age">
+                <input type="number" name="age" placeholder="Your Age">
+            </div>
+            <div id="gender">
+                Gender: <input type="radio" name="gender" value="male"> Male
+                        <input type="radio" name="gender" value="female"> Female
+            </div>
+            <div id="destination">
+                Select Your Destination:
+                <select name="destination">
+                    <option value="Paris">Paris</option>
+                    <option value="Rome">Rome</option>
+                    <option value="Madrid">Madrid</option>
+                </select>
+            </div>
+            <div id="dietary-restrictions">
+                    Dietary Restrictions:
+                    <ul id="diet-types">
+                        <li><input type="checkbox" name="diet" value="gluten-free"> Gluten Free</li>
+                        <li><input type="checkbox" name="diet" value="lactose-free"> Lactose Free</li>
+                        <li><input type="checkbox" name="diet" value="vegetarian"> Vegetarian</li>
+                    </ul>
+                    
+            </div>
+            <button>Let's Go!</button>
+        </form>
+    </div>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+h1 {
+    font-family: fantasy;
+    font-size: 46px;
+    color: black;
+}
+
+#travel-quote {
+    font-style: italic;
+}
+
+#diet-types {
+    list-style-type: none;
+    margin: none;
+}
