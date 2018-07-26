@@ -1,0 +1,265 @@
+.french-container {
+    display: inline-block;
+    position: relative;
+    height: 200px;
+    width: 300px;
+    border: 2px solid #D9F4F3;
+}
+
+#f-blue {
+    background-color: blue;
+    position: absolute;
+    height: 200px;
+    width: 100px;
+}
+
+#f-white {
+    position: absolute;
+    height: 200px;
+    width: 100px;
+}
+
+#f-red {
+    position: absolute;
+    background-color: red;
+    height: 200px;
+    width: 100px;
+    right: 0;
+}
+
+.german-container {
+    display: inline-block;
+    position: relative;
+    height: 200px;
+    width: 300px;
+    border: 2px solid #D9F4F3;
+}
+
+#g-black {
+    position: absolute;
+    background-color: black;
+    height: 34%;
+    width: 300px;
+}
+
+#g-red {
+    position: absolute;
+    background-color: red;
+    height: 33%;
+    width: 300px;
+    top: 34%;
+}
+
+#g-yellow {
+    position: absolute;
+    background-color: #FFCC00;
+    height: 33%;
+    width: 300px;
+    top: 67%;
+}
+
+.madagascar-container {
+    display: inline-block;
+    position: relative;
+    height: 200px;
+    width: 300px;
+    border: 2px solid #D9F4F3;
+}
+
+#mad-white {
+    position: absolute;
+    height: 200px;
+    width: 100px;
+    left: 0px;
+}
+
+#second-block {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    right: 0px;
+}
+
+#mad-red {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    top: 0px;
+    background-color: red;
+}
+
+#mad-green {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    bottom: 0px;
+    background-color: green;
+}
+
+.switzerland-container {
+    display: inline-block;
+    background-color: red;
+    position: relative;
+    height: 300px;
+    width: 300px;
+    border: 2px solid #D9F4F3;
+}
+
+#s-white1 {
+    position: absolute;
+    background-color: white;
+    height: 50px;
+    width: 200px;
+    left: 50px;
+    top: 40%;
+}
+
+#s-white2 {
+    position: absolute;
+    background-color: white;
+    height: 200px;
+    width: 50px;
+    left: 40%;
+    top: 50px;
+}
+
+.switzerland-container {
+    display: inline-block;
+    background-color: red;
+    position: relative;
+    height: 300px;
+    width: 300px;
+    border: 2px solid #D9F4F3;
+}
+
+.sweden-container {
+    display: inline-block;
+    background-color: gold;
+    position: relative;
+    height: 200px;
+    width: 300px;
+    border: 2px solid #D9F4F3;
+}
+
+#s-blue1 {
+    position: absolute;
+    height: 77px;
+    width: 33%;
+    background-color: #006AA7;
+    top: 0px;
+    left: 0px;
+}
+
+#s-blue2 {
+    position: absolute;
+    height: 77px;
+    width: 33%;
+    background-color: #006AA7;
+    bottom: 0px;
+    left: 0px;
+}
+
+#s-blue3 {
+    position: absolute;
+    height: 77px;
+    width: 49%;
+    background-color: #006AA7;
+    top: 0px;
+    right: 0px;
+}
+
+#s-blue4 {
+    position: absolute;
+    height: 77px;
+    width: 49%;
+    background-color: #006AA7;
+    bottom: 0px;
+    right: 0px;
+}
+
+.gambia-container {
+    display: inline-block;
+    position: relative;
+    height: 200px;
+    width: 300px;
+    border: 2px solid #D9F4F3;
+}
+
+#gam-red {
+    position: absolute;
+    height: 62px;
+    width: 100%;
+    background-color: red;
+    top: 0px;
+}
+
+#gam-blue {
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    background-color: blue;
+    top: 75px;
+}
+
+#gam-green {
+    position: absolute;
+    height: 62px;
+    width: 100%;
+    background-color: green;
+    bottom: 0px;
+}
+
+.tonga-container {
+    position: relative;
+    display: inline-block;
+    height: 200px;
+    width: 300px;
+    background-color: red;
+    border: 2px solid #D9F4F3;
+}
+
+#tonga-white {
+    position: absolute;
+    background-color: white;
+    height: 94px;
+    width: 138px;
+    top: 0px;
+    left: 0px;
+}
+
+#t-small-red1 {
+    position: absolute;
+    background-color: red;
+    height: 30px;
+    width: 78px;
+    top: 32px;
+    left: 27px;
+}
+
+#t-small-red2 {
+    position: absolute;
+    background-color: red;
+    height: 78px;
+    width: 30px;
+    top: 8px;
+    left: 51px;
+}
+
+.japan-container {
+    position: relative;
+    display: inline-block;
+    height: 200px;
+    width: 300px;
+    background-color: white;
+    border: 2px solid #D9F4F3;
+}
+
+#j-circle {
+    position: absolute;
+    background-color: red;
+    left: 26%;
+    top: 16%;
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+}
