@@ -1,3 +1,72 @@
 body {
-    background-color: #625B60;
+    background-color: rgb(201, 194, 199);
 }
+
+#header {
+    position: relative;
+    /* border: 2px solid black; */
+}
+
+h1 {
+    text-align: center;
+}
+
+#services-container {
+    position: relative;
+    display: inline-block;
+    height: 260px;
+    width: 650px;
+    /* border: 2px solid black; */
+}
+
+.baddies {
+    display: inline-block;
+    position: relative;
+    height: 250px;
+    width: 200px;
+    left: 17px;
+    top: 50px;
+    /* border: 1px solid black; */
+
+}
+
+/* #goomba {
+    position: relative;
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+} */
+
+.img img {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    left: 25px;
+    top: 20px;
+}
+
+.count {
+    position: absolute;
+    bottom: 2px;
+    left: 5px;
+}
+
+input {
+    width: 180px;
+}
+
+.baddy-name {
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    margin: 18px;
+}
+
+/* #bob-omb {
+    position: relative;
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+} */
