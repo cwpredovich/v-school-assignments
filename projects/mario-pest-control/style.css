@@ -61,7 +61,22 @@ input {
     font-weight: bold;
     display: block;
     text-align: center;
-    margin: 18px;
+    margin: 5px;
+}
+
+.cost {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.cost img {
+    height: 25px;
+    width: 25px;
+}
+
+#footer {
+    position: relative;
+    bottom: 0px;
 }
 
 /* #bob-omb {
