@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    margin: -8px;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+#logo > img {
+    height: 75px;
+    width: 75px;
+    margin: 10px;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: black;
+    margin: 0;
+}
+
+header > nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100px;
+    width: 1000px;
+}
+
+header > nav > a {
+    margin: 15px;
+}
+
+#company-name {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+}
+
+nav > ul {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+nav > ul > li {
+    margin: 15px;   
+    font-size: 18px; 
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+video {
+    position: relative;
+    width: 101.2%;
+    right: 9px;
+    top: -229px;
+    z-index: -1;
+}
+
+@media only screen and (max-width: 400px) {
+    header {
+        width: 390px;
+        height: 75px;
+        font-size: 12px
+    }
+
+    #logo > img {
+        height: 40px;
+        width: 40px;
+    }
+
+    header > nav {
+        display: flex;
+        align-items: center;
+    }
+
+    header > nav > a {
+        margin: 5px;
+    }
+
+    /* #company-name {
+        : "BEVS";
+    } */
+}

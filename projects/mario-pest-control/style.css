@@ -1,22 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Hanalei+Fill');
+
 body {
     background-color: rgb(201, 194, 199);
 }
 
 #header {
     position: relative;
-    /* border: 2px solid black; */
 }
 
 h1 {
     text-align: center;
+    font-family: 'Hanalei Fill', cursive;
+    font-size: 45px;
 }
 
 #services-container {
     position: relative;
     display: inline-block;
-    height: 260px;
-    width: 650px;
-    /* border: 2px solid black; */
+    height: 350px;
+    width: 800px;
 }
 
 .baddies {
@@ -26,17 +28,7 @@ h1 {
     width: 200px;
     left: 17px;
     top: 50px;
-    /* border: 1px solid black; */
-
 }
-
-/* #goomba {
-    position: relative;
-    display: inline-block;
-    height: 200px;
-    width: 200px;
-    border: 2px solid black;
-} */
 
 .img img {
     position: absolute;
@@ -79,9 +71,49 @@ input {
     bottom: 0px;
 }
 
-/* #bob-omb {
+.tinycoin {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    bottom: 25px;
+}
+
+#cheep-cheep {
     position: relative;
     display: inline-block;
-    height: 200px;
+    right: 0px;
+}
+
+#calc-btn {
+    position: absolute;
+    display: block;
+    bottom: 0px;
+    left: 250px;
+}
+
+#cost-box {
+    position: absolute;
+    display: inline-block;
+    bottom: -160px;
+    height: 150px;
     width: 200px;
-} */
+    left: 240px;
+
+}
+
+#contact {
+    border-top: 1px solid black;
+    display: inline-block;
+    list-style-type: none;
+    position: absolute;
+    bottom: -300px;
+}
+
+#contact > li {
+    display: inline-block;
+    margin: 30px;
+}
+
+#bold {
+    font-weight: bold;
+}
