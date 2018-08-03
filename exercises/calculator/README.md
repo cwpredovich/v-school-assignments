@@ -1,0 +1,1 @@
+In this exercise, I created an online calculator using JS, HTML, and just a little bit of CSS.

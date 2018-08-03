@@ -1,0 +1,1 @@
+This project required that I creat a web site for a new business.

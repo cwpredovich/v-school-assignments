@@ -1,0 +1,1 @@
+Created a color grid on an HTML page using just CSS

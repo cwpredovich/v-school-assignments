@@ -1,0 +1,1 @@
+Practiced front end web dev by creating a fake online newspaper.

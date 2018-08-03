@@ -1,0 +1,1 @@
+Manipulated strings with readline-sync

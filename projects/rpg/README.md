@@ -1,0 +1,1 @@
+This is a readline-sync based role playing game!

@@ -1,0 +1,1 @@
+Created a JavaScript calculator using the node module called readline-sync.

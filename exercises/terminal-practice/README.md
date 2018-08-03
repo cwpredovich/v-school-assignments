@@ -1,0 +1,1 @@
+Intro and practice with the terminal

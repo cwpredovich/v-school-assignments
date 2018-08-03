@@ -1,0 +1,1 @@
+Created an object with a simple function in it.

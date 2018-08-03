@@ -1,0 +1,1 @@
+This folder just contains files I am using to test different things in HTML, CSS, and JavaScript. It's a playground.

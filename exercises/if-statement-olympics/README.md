@@ -1,0 +1,1 @@
+Practiced very simple if statements and console.log.
