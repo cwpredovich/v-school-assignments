@@ -1,4 +1,10 @@
 // I want this version of my RPG to have music and sound effects. It MIGHT also include a narrator with a computer voice actually talking out loud to the player!
+ //      pathway to the game:
+ //
+ //      cd dev/assignments/projects/rpg
+ //
+ //
+ //
 
 
    /////////////////////
@@ -10,11 +16,8 @@
  // var say = require('say');
  
  
- 
- // cd dev/assignments/projects/rpg
- //
- //
- //
+
+
    //////////////////
   /// Variables ////
  //////////////////
@@ -159,7 +162,7 @@
   /////////////////
  
  function walk(){
-     console.clear();
+    //  console.clear();
      var battleChance = Math.floor(Math.random() * 100 + 1)
      if (battleChance <= 33) {
          sound.play("new-challenger.mp3");

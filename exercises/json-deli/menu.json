@@ -1,0 +1,48 @@
+{
+    "Appetizers": [
+        {
+            "Item Name": "Hot Pockets",
+            "Ingredients": ["Bread", "Cheese", "Mystery Meet", "Chunks of Ice", "Molten hot pizza sauce"],
+            "Description": "Can only be heated to one of two temperatures:  Half-frozen or Hot Liquid Magma"
+        },
+        {
+            "Item Name": "Cool Ranch Doritos",
+            "Ingredients": ["Corn chips", "MSG", "unknown flavoring"],
+            "Description": "Perfect snack or appetizer go-to."
+        },
+        {
+            "Item Name": "String Cheese",
+            "Ingredients": ["Mozarella cheese", "Happiness"],
+            "Description": ""
+        },
+        {
+            "Item Name": "Green Bananas",
+            "Ingredients": ["Bananas"],
+            "Description": "Utah's finest unripe bananas"
+        }
+    ],
+    "Cold Sandwiches": [
+        {
+            "Sammich": "Bologna Sammich",
+            "Ingredients": ["Great Value white bread", "Bologna", "Mustard", "Mayonaise"],
+            "Description": "A healthy choice that won't break your budget!"
+        },
+        {
+            "Sammich": "Ham Sammich Sliders",
+            "Ingredients": ["Sweet Hawaiian roll bread", "leftover ham", "Swiss cheese"],
+            "Description": "Bite sized happiness"
+        }
+    ],
+    "Desserts": [
+        {
+            "Dessert": "Otter Pops",
+            "Ingredients": ["Fruit flavoring", "Water", "Tons of sugar"],
+            "Description": "Buy one - get one free!"
+        },
+        {
+            "Dessert": "Oreos",
+            "Ingredients": ["Chocolate cookie", "cream filling"],
+            "Description": "Carton is half empty, but they're double stuffed oreos, therefore the carton is still full, right?"
+        }
+    ]
+}

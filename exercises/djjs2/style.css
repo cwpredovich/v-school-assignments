@@ -1,0 +1,25 @@
+.container {
+    display: inline-block;
+    height: 650px;
+    width: 1000px;
+    background-color: black;
+    border: 2px solid dodgerblue;
+}
+
+.turntables {
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    margin  : 50px;
+    border: 1px solid white;
+
+}
+
+.turntables:hover {
+    box-shadow: 0ch;
+    border-radius: 
+}
+
+#table1 {
+
+}
