@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To Do</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <header id="header">
+            <h1>Topher's To-do's</h1>
+        </header>
+    
+        <section id="leftside"></section>
+
+        <aside id="rightside">
+            <h2>Add New To-do's</h2>
+            <form name="post" id="postForm">
+                <input type="text" name="task" id="task" placeholder="Task">
+                <input type="text" name="descr" id="descr" placeholder="Description">
+                <input type="number" name="price" id="price" placeholder="Price">
+                <button name="addToDo">Add To-do Item</button>
+            </form>
+        </aside>
+    </div>
+    
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

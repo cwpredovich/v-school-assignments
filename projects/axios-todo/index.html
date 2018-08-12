@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Axios To Do List</title>
+
+</head>
+<body>
+    <header>
+        <h1>Task Master</h1>
+        <h3>Time to crack the whip!</h3>
+    </header>
+
+    <main>
+        <form name="specifyName">
+            <input type="text" name="nameSpecified" placeholder="Employee Username">
+            <button>Fetch Tasks</button>
+        </form>
+        <section>
+                <!-- This is where all incomplete tasks go on the left side of the screen. -->
+
+            <ol id="defaultList">
+                
+            </ol>
+        </section>
+
+        <aside id="completed">
+            <!-- This is where all completed tasks go on the right side of the screen. -->
+
+        </aside>
+    </main>
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
