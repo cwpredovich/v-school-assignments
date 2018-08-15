@@ -20,8 +20,18 @@
 }
 
 #rightside {
-    display: grid;  
+    display: grid; 
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-column: 2/3;
     grid-row: 2/-1;
     border: 1px solid black;
 }
+
+#top-right {
+    display: grid;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    border: 1px solid black;
+}
+
