@@ -1,0 +1,43 @@
+#container {
+    display: grid;
+}
+
+header {
+    border-top: solid 10px rgba(19, 67, 71, 0.9);
+    height: 310px;
+    width: 100%;
+    display: grid;
+    position: relative;
+    background-image: url(contours@2x.png), url(noise.png), url(gridlines.png), url(huntington.jpg);
+    background-size: 50% auto, auto, auto, cover;
+    /* background: #2d6360 50% 0 url(huntington.jpg); */
+    /* opacity: 0.8; */
+}
+
+h1 {
+    font-family: "Julius Sans One", sans-serif;
+    font-size: 3.2em;
+}
+
+/* header::after {
+    content: "";
+    
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+} */
+
+/* #main {
+
+}
+
+#aside {
+
+}
+
+#footer {
+ bakcground color#325050
+} */
