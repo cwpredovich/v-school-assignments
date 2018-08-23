@@ -56,6 +56,22 @@ getFibonacci(7)
 
 
 // Write a function which solves the quadratic equation
-// take 
+// take 3 variables, solve for x
+// formula 1:
+const solveForX = (a, b, c) => {
+    const firstValueX = ((b * -1) + (Math.sqrt((Math.pow(b, 2)) - (4 * a * c)))) / (2 * a);
+    const secondValueX = ((b * -1) - (Math.sqrt((Math.pow(b, 2)) - (4 * a * c)))) / (2 * a);
+    return `x = ${firstValueX}, x = ${secondValueX}`
+}
+
+console.log(solveForX(1, 3, -4))
 
 
+// Write a function that takes a string and returns the most used character
+
+const getPopularCharacter = (str) => {
+    // I have a function
+    // In it, I will break the string into an array
+    // Then I will also create an array of all letters in the alphabet
+    // loop through the string arrayk
+}
