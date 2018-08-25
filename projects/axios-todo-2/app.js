@@ -15,6 +15,10 @@ var displayTodo = function(todo){
     var price = document.createElement("p");
     price.innerHTML = `Price: ${todo.price}`;
 
+    var img = document.createElement("img");
+    img.setAttribute("src", todo.imgUrl);
+    img.setAttribute("width", "200px")
+
     var completed = document.createElement("p");
     completed.innerHTML = `Complete:  ${todo.completed}`;
 
@@ -61,6 +65,7 @@ var displayTodo = function(todo){
     container.appendChild(description);
     container.appendChild(completed);
     container.appendChild(price);
+    container.appendChild(img);
     container.appendChild(checkDiv);
     checkDiv.appendChild(checkMark);
     container.appendChild(del);
@@ -84,10 +89,12 @@ document.post.addEventListener('submit', function(e){
     var title = document.post.task.value;
     var descr = document.post.descr.value;
     var price = document.post.price.value;
+    var imgUrl = document.post.imgUrl.value;
     var newToDo = {
         title: title,
         description: descr,
-        price: price
+        price: price,
+        imgUrl: imgUrl
     };
     console.log(newToDo);
     axios.post(url, newToDo).then(function(response){
