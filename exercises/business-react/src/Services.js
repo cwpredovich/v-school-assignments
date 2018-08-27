@@ -40,11 +40,11 @@ const Services = () => {
         <div>
             {/* <Service /> */}
             {servicesOffered.map((service, index) => 
-            <div key={service.name + index}>
-                <h3>{service.name}</h3>
-                <p>{service.description}</p>
-                <p>Price: {service.price}</p>
-            </div>
+                <div key={service.name + index}>
+                    <h3>{service.name}</h3>
+                    <p>{service.description}</p>
+                    <p>Price: {service.price}</p>
+                </div>
             )}
         </div>
     )
