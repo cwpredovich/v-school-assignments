@@ -4,7 +4,7 @@
 
 header {
     border-top: solid 10px rgba(19, 67, 71, 0.9);
-    height: 310px;
+    height: 245px;
     width: 100%;
     display: grid;
     position: relative;
@@ -15,8 +15,10 @@ header {
 }
 
 h1 {
-    font-family: "Julius Sans One", sans-serif;
+    /* font-family: "Julius Sans One", sans-serif; */
     font-size: 3.2em;
+    color: white;
+    font-family: "Libre Baskerville", sans-serif;
 }
 
 /* header::after {
