@@ -62,20 +62,78 @@ body {
 .stocksPage {
     height: 900px;
     background-color: lightgray;
+    position: relative;
+    top: -21px;
 }
 
-a:link {
+.favStocksAndDisplayStocks {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+/* .favStocks {
+    border: 1px solid black;
+} */
+
+.stocksPageContent {
+    margin-left: 20px;
+}
+
+.resourcesPage {
+    height: 900px;
+    background-color: lightgray;
+    position: relative;
+}
+
+/* .resourcesTitle {
+    color: white;
+} */
+
+.resourcesList {
+    font-size: 1.4em;
+}
+
+.wallStImg {
+    height: 580px;
+    background-image: url("../images/wallst.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 78%;
+    text-align: center;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+}
+
+.resourcesTitle {
+    font-family: 'Anton', sans-serif;
+    font-size: 4em;
+    letter-spacing: 3px;
+    color: rgb(10, 3, 3);
+    background-color: rgba(128, 128, 128, 0.324);
+    padding: 18px;
+    position: absolute;
+    top: 400px;
+}
+
+.navLinks:link {
     color:black;
     text-decoration: none;
 }
 
-a:visited {
+.navLinks:visited {
     color:black;
     text-decoration: none;
 }
 
-a:hover {
+.navLinks:hover {
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     /* text-decoration: underline overline; */
+}
+
+.italicQuote {
+    font-style: italic;
 }
