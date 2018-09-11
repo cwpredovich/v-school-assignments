@@ -1,5 +1,5 @@
 {
-  "name": "intro-to-servers",
+  "name": "express-bounty-hunter",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "uuid": "^3.3.2"
   }
 }

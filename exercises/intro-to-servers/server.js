@@ -17,4 +17,5 @@ app.get('/', (request, response) => {
 
 app.listen(8989, () => {
     console.log(`Hi, your server is running on port 8989`)
+    // the port can be anything between 3001 and 9000
 });
