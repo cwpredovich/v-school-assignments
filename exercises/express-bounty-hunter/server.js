@@ -11,46 +11,19 @@ const uuid = require('uuid/v4');
 // Listen
 
 // Mock Database
-const bountyList = [
-    {
-        firstName: 'Obi Wan',
-        lastName: 'Kenobi',
-        living: true,
-        bounty: 400,
-        type: 'jedi',
-        id: '1234'
-    },
-    {
-        firstName: 'Mace',
-        lastName: 'Windu',
-        living: true,
-        bounty: 400,
-        type: 'jedi',
-        id: '2234'
-    },{
-        firstName: 'Qui Gon',
-        lastName: 'Jinn',
-        living: true,
-        bounty: 400,
-        type: 'jedi',
-        id: '3234'
-    },
-]
+
 
 // Middleware
 app.use(bodyParser.json());
 
-// Routes
-app.get('/bounties', (req, res) => {
-    res.send(bountyList);
-})
+// Mongoos/MongoDB
+// app.use(express.json());
 
-app.post('/bounties', (req, res) => {
-    const newBounty = req.body;
-    newBounty.id = uuid();
-    bountyList.push(newBounty);
-    res.send(newBounty);
-})
+
+// Routes
+app.use('/bounties', require('./bountyRoutes'))
 
 // Listen
-app.listen(4564);
+app.listen(5555, ()=>{
+    console.log('server is running on port ' + 5555)
+});
