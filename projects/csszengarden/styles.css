@@ -1,12 +1,19 @@
-#container {
-    display: grid;
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville');
+
+body {
+    margin: 0px;
 }
 
-header {
-    border-top: solid 10px rgba(19, 67, 71, 0.9);
-    height: 245px;
-    width: 100%;
+.container {
     display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.header {
+    border-top: solid 10px rgba(19, 67, 71, 0.9);
+    height: 310px;
+    width: 100%;
+    text-align: center;
     position: relative;
     background-image: url(contours@2x.png), url(noise.png), url(gridlines.png), url(huntington.jpg);
     background-size: 50% auto, auto, auto, cover;
@@ -14,32 +21,36 @@ header {
     /* opacity: 0.8; */
 }
 
+.headerTitlesAndLogo {
+    display: inline-block;
+}
+
+.circularLogo {
+    height:120px;
+    width: 120px;
+    margin: -20px 20px 0 0;
+}
+
 h1 {
-    /* font-family: "Julius Sans One", sans-serif; */
-    font-size: 3.2em;
+    /* height: 73px; */
+    /* box-sizing: border-box; */
+    /* vertical-align: center; */
+    display: inline-block;
+    top: 20px;
+    font-family: 'Julius Sans One', sans-serif;
+    text-transform: uppercase;
+    font-size: 55px;
+    font-weight: 400;
     color: white;
-    font-family: "Libre Baskerville", sans-serif;
+    /* margin-top: 45px; */
+    margin-bottom: -12px;
 }
 
-/* header::after {
-    content: "";
-    
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
-} */
-
-/* #main {
-
+p {
+    text-align: left;
+    font-family: serif;
+    font-style: italic;
+    font-size: 30px;
+    margin-top: 10px;
+    color: rgba(247, 239, 239, 0.699);
 }
-
-#aside {
-
-}
-
-#footer {
- bakcground color#325050
-} */
