@@ -1,15 +1,72 @@
 @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville');
 
+* {
+    border: 1px solid black;
+}
+
 body {
     margin: 0px;
+    color: #325050;
+    font-family: "Libre Baskerville", sans-serif;
 }
 
 .container {
     display: grid;
+    grid-template:  "a b"
+                    "c d"
+                    "e f"
+                    "g g";
     grid-template-columns: 2fr 1fr;
+    line-height: 2em;
 }
 
-.header {
+.leftSide {
+    padding: 5% 5% 5% 10%;
+}
+
+.roadToEnlightenment {
+    grid-area: a;
+    /* height: 300px; */
+    /* display: flex; */
+}
+
+
+.midCenturyAndOtherPages {
+    grid-area: b;
+    /* display: inline; */
+    /* box-sizing: border-box; */
+    /* height: 300px; */
+}
+
+.participation {
+    grid-area: c;
+    /* height: 300px; */
+}
+
+.viewCssAndOtherLinks {
+    grid-area: d;
+    /* height: 300px; */
+}
+
+.requirements {
+    grid-area: e;
+    /* height: 300px; */
+}
+
+.blank {
+    grid-area: f;
+    /* height: 300px; */
+}
+
+.bottomLine {
+    grid-area: g;
+    /* height: 300px; */
+}
+
+
+.topLineContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     border-top: solid 10px rgba(19, 67, 71, 0.9);
     height: 310px;
     width: 100%;
@@ -17,12 +74,20 @@ body {
     position: relative;
     background-image: url(contours@2x.png), url(noise.png), url(gridlines.png), url(huntington.jpg);
     background-size: 50% auto, auto, auto, cover;
-    /* background: #2d6360 50% 0 url(huntington.jpg); */
-    /* opacity: 0.8; */
+}
+
+
+
+.header {
+    display: flex;
+    justify-content: center;
+    /* background: #2d6360 50% 0 url(huntington.jpg);
+    opacity: 0.8; */
 }
 
 .headerTitlesAndLogo {
-    display: inline-block;
+    display: flex;
+    align-items: center;
 }
 
 .circularLogo {
@@ -31,7 +96,7 @@ body {
     margin: -20px 20px 0 0;
 }
 
-h1 {
+.mainTitle {
     /* height: 73px; */
     /* box-sizing: border-box; */
     /* vertical-align: center; */
@@ -46,7 +111,7 @@ h1 {
     margin-bottom: -12px;
 }
 
-p {
+.subtitle {
     text-align: left;
     font-family: serif;
     font-style: italic;
@@ -54,3 +119,54 @@ p {
     margin-top: 10px;
     color: rgba(247, 239, 239, 0.699);
 }
+
+.viewAllDesigns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.viewAllDesigns > div {
+    height: 70px;
+    background: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Julius Sans One", sans-serif;
+    font-size: 1.2em;
+}
+
+.linkAndArrow {
+    display: flex;
+    align-items: center;
+}
+
+.viewAllLink > a {
+    text-decoration: none;
+    color: rgba(247, 239, 239, 0.699);
+}
+
+.viewAllLink > a:visited {
+    color: rgba(247, 239, 239, 0.699);
+}
+
+.arrow {
+    /* height: 70px;
+    width: 70px; */
+    font-family: "verdemoderna";
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+/* .actualArrow {
+    position: absolute;
+
+} */
+
+/* .summary {
+    padding: 50px 70px 15px 140px;
+} */

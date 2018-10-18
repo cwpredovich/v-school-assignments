@@ -1,0 +1,33 @@
+/* @import url('https://fonts.googleapis.com/css?family=Luckiest+Guy|Chivo'); */
+
+h1 { font-family: "Luckiest Guy", Impact; }
+
+body { font-family: "Chivo", Verdana; }
+
+.container {
+    display: grid;
+    grid-template-rows: 2;
+}
+
+.container > * {
+    justify-self: center;
+}
+
+.heading {
+    text-align: center;
+}
+
+.input-box {
+    border: 1px solid gray;
+    padding: 5px 5px 0px 5px;
+    color: gray;
+}
+
+.subheading {
+    margin: 0;
+    text-align: left;
+}
+
+.examples {
+    margin-top: 40px;
+}
