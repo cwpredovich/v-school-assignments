@@ -8,6 +8,7 @@ body {
     margin: 0px;
     color: #325050;
     font-family: "Libre Baskerville", sans-serif;
+    font-size: 16px;
 }
 
 .container {
@@ -20,8 +21,21 @@ body {
     line-height: 2em;
 }
 
+/* media query: when the screen gets small enough, drop down to only one column (1fr) and place divs where they need to be using a new grid-area */
+
 .leftSide {
-    padding: 5% 5% 5% 10%;
+    padding: 6% 7% 6% 15%;
+}
+
+.rightSide {
+    background: #e5ede8;
+    width: auto;
+}
+
+.viewAllDesigns {
+    background: #e5ede8;
+    opacity: .1;
+    /* z-index: -1; */
 }
 
 .roadToEnlightenment {
@@ -40,6 +54,7 @@ body {
 
 .participation {
     grid-area: c;
+
     /* height: 300px; */
 }
 
@@ -63,7 +78,6 @@ body {
     /* height: 300px; */
 }
 
-
 .topLineContainer {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -75,8 +89,6 @@ body {
     background-image: url(contours@2x.png), url(noise.png), url(gridlines.png), url(huntington.jpg);
     background-size: 50% auto, auto, auto, cover;
 }
-
-
 
 .header {
     display: flex;
@@ -134,6 +146,7 @@ body {
     text-transform: uppercase;
     font-family: "Julius Sans One", sans-serif;
     font-size: 1.2em;
+    z-index: 1;
 }
 
 .linkAndArrow {
@@ -162,11 +175,53 @@ body {
     margin: 5px;
 }
 
-/* .actualArrow {
-    position: absolute;
+.midCenturyAndOtherPages {
+    padding: 40px 0px 20px 0px;
+}
 
-} */
+.midCenturyAndOtherPages ul {
+    list-style: none;
+    margin: 0px
+}
 
-/* .summary {
-    padding: 50px 70px 15px 140px;
-} */
+.midCenturyAndOtherPages li {
+    border-bottom: solid 1px #d9e3dc;
+    float: none;
+    width: auto;
+    padding: 10px 0px 10px 0px;
+    margin: 0 23.4% 0 12.7%;
+}
+
+.rightSide a {
+    color: #607476;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #1a5952;
+}
+
+.juliusHeading {
+    font-family: "Julius Sans One", sans-serif;
+    text-transform: uppercase;
+    font-size: 1.8em;
+    font-weight: 100;
+}
+
+.designName {
+    font-family: "Julius Sans One", sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.designerName {
+    color: #616857;
+    font-size: 16px;
+}
+
+.italicBy {
+    font-style: italic;
+    color: #c0cac3;
+    font-size: 14px;
+}
