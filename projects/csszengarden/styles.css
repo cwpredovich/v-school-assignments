@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville');
 
 * {
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 body {
@@ -16,7 +16,8 @@ body {
     grid-template:  "a b"
                     "c d"
                     "e f"
-                    "g g";
+                    "g g"
+                    "h h";
     grid-template-columns: 2fr 1fr;
     line-height: 2em;
 }
@@ -75,7 +76,12 @@ body {
 
 .bottomLine {
     grid-area: g;
-    /* height: 300px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-image: url("koi.jpg");
+    color: white;
 }
 
 .topLineContainer {
@@ -141,7 +147,7 @@ body {
 
 .viewAllDesigns > div {
     height: 70px;
-    background: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
     text-decoration: none;
     text-transform: uppercase;
     font-family: "Julius Sans One", sans-serif;
@@ -160,7 +166,17 @@ body {
 }
 
 .viewAllLink > a:visited {
-    color: rgba(247, 239, 239, 0.699);
+    /* color: rgba(247, 239, 239, 0.699); */
+}
+
+.rightSide a {
+    color: #607476;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #1a5952;
+    text-decoration: none;
 }
 
 .arrow {
@@ -179,7 +195,7 @@ body {
     padding: 40px 0px 20px 0px;
 }
 
-.midCenturyAndOtherPages ul {
+ul {
     list-style: none;
     margin: 0px
 }
@@ -188,17 +204,8 @@ body {
     border-bottom: solid 1px #d9e3dc;
     float: none;
     width: auto;
-    padding: 10px 0px 10px 0px;
+    padding: 18px 0px 15px 0px;
     margin: 0 23.4% 0 12.7%;
-}
-
-.rightSide a {
-    color: #607476;
-    text-decoration: none;
-}
-
-a:visited {
-    color: #1a5952;
 }
 
 .juliusHeading {
@@ -206,6 +213,8 @@ a:visited {
     text-transform: uppercase;
     font-size: 1.8em;
     font-weight: 100;
+    /* padding-top: 10px; */
+    margin-top: 38px;
 }
 
 .designName {
@@ -224,4 +233,44 @@ a:visited {
     font-style: italic;
     color: #c0cac3;
     font-size: 14px;
+}
+
+.otherLinksList {
+    margin-top: 140px;
+}
+
+.otherLinks {
+    border-bottom: solid 1px #d9e3dc;
+    /* float: none; */
+    /* width: auto; */
+    font-family: "Julius Sans One", sans-serif;
+    text-transform: uppercase;
+    font-size: 21px;
+    padding: 15px 0px 15px 0px;
+    margin: 0 23.4% 0 12.7%;
+}
+
+.bottomP {
+    text-align: center;
+    font-size: 2.4em;
+    font-family: serif;
+    font-style: italic;
+    color: rgb(168, 168, 168);
+    margin: 0% 15% 0% 15%;
+}
+
+.bottomLinks {
+    color: white;
+    font-family: "Libre Baskerville", sans-serif;
+    font-size: 0.9em;
+    text-decoration: none;
+    font-style: normal;
+}
+
+.footer {
+    grid-area: h;
+    background: #134347;
+    text-align: center;
+    height: 150px;
+    line-height: 3em;
 }
