@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville');
+@font-face {
+    font-family: verdemoderna;
+    src: url(verdemoderna.woff);
+}
 
 /* * {
     border: 1px solid black;
@@ -22,19 +26,6 @@ body {
     line-height: 2em;
 }
 
-@media only screen and (max-width: 1126px) {
-    .container {
-        grid-template:  "a"
-                        "c"
-                        "e"
-                        "g"
-                        "h"
-                        "b"
-                        "d";
-    }
-}
-
-
 .leftSide {
     padding: 6% 7% 6% 15%;
 }
@@ -42,11 +33,6 @@ body {
 .rightSide {
     background: #e5ede8;
     width: auto;
-}
-
-.viewAllDesigns {
-    background-color: #e5ede8;
-    opacity: .1;
 }
 
 .roadToEnlightenment {
@@ -72,7 +58,7 @@ body {
 .viewCssAndOtherLinks {
     grid-area: d;
     background-image: url("bamboo.png"), url("contours@2x.png"), url("gridlines.png");
-    height: 878px;
+    height: 866px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -100,10 +86,11 @@ body {
 
 .topLineContainer {
     display: grid;
+    grid-template:  "x y";
     grid-template-columns: 2fr 1fr;
     border-top: solid 10px rgba(19, 67, 71, 0.9);
     height: 310px;
-    width: 100%;
+    /* width: 100%; */
     text-align: center;
     position: relative;
     background-image: url(contours@2x.png), url(noise.png), url(gridlines.png), url(huntington.jpg);
@@ -111,6 +98,7 @@ body {
 }
 
 .header {
+    grid-area: x;
     display: flex;
     justify-content: center;
 }
@@ -146,8 +134,15 @@ body {
     color: rgba(247, 239, 239, 0.699);
 }
 
-.viewAllDesigns {
+.viewAllDesignsBottom {
+    grid-area: y;
+    display: none;
+}
+
+.viewAllDesigns {    
+    background-color: #e5ede807;
     display: flex;
+    grid-area: y;
     justify-content: center;
     align-items: center;
     color: white;
@@ -160,7 +155,8 @@ body {
     text-transform: uppercase;
     font-family: "Julius Sans One", sans-serif;
     font-size: 1.2em;
-    z-index: 1;
+    /* position: relative;
+    z-index: -1; */
 }
 
 .linkAndArrow {
@@ -168,13 +164,20 @@ body {
     justify-content: center;
     align-items: center;
     height: 75px;
-    width: 256px;
-    position: absolute;
+    width: 316px;
+    /* position: relative; */
+    /* z-index: 1; */
     right: 155px;
     top: 115px;
     text-transform: uppercase;
-    background-color: rgba(216, 213, 213, 0.171);
+    background-color: rgba(216, 213, 213, 0.2);
 }
+
+.rightSide a {
+    color: #607476;
+    text-decoration: none;
+}
+
 
 .viewAllLink > a {
     font-family: "Julius Sans One";
@@ -183,17 +186,11 @@ body {
     color: rgba(247, 239, 239, 0.699);
 }
 
-.rightSide a {
-    color: #607476;
-    text-decoration: none;
-}
-
 a:visited {
     text-decoration: none;
 }
 
 .arrow {
-    position: absolute;
     right: -64px;
     top: -5px;
     height: 75px;
@@ -205,7 +202,6 @@ a:visited {
     align-items: center;
     justify-content: center;
     margin: 5px;
-    background-color: rgba(216, 213, 213, 0.171);
 }
 
 .midCenturyAndOtherPages {
@@ -285,7 +281,77 @@ ul {
 .footer {
     grid-area: h;
     background: #134347;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "verdemoderna", sans-serif;
+    font-size: 68px;
     height: 150px;
     line-height: 3em;
 }
+
+.footer > a {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.footer > a:visited {
+    color: rgb(168, 168, 168);
+}
+
+@media only screen and (max-width: 1143px) {
+    .topLineContainer {
+        grid-template:  "x"
+                        "y";
+        grid-template-columns: auto;
+    }
+
+    .viewAllDesigns {
+        display: none;
+    }
+
+    .header {
+        width: 100%;
+    }
+
+    .viewAllDesignsBottom {
+        display: flex;
+        height: 64px;
+        margin-top: auto;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        background-color: rgba(216, 213, 213, 0.2);
+    }
+
+    .viewAllLink > a {
+        font-size: 16px;
+    }
+
+    .blankSpace {
+        flex-grow: 3;
+    }
+
+    .viewAllLink {
+        flex-grow: 1;
+    }
+
+    .arrow {
+        flex-grow: 3;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+@media only screen and (max-width: 1143px) {
+    .container {
+        grid-template:  "a"
+                        "c"
+                        "e"
+                        "g"
+                        "h"
+                        "b"
+                        "d";
+    }
+}
+
