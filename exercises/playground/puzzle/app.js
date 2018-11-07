@@ -1,14 +1,10 @@
-let puzzle = [
-    [1,2,3,4,'.',6,7,8,9],
-    ['.',8,7,6,5,4,3,2,'.'],
-    [1,'.',9,8,3,4,7,'.',5]
-  ]
+
   
   /////////////////////////////////
   // 1. UNDERSTAND THE PROBLEM: //
   ///////////////////////////////
     // I need a function that can dynamically solve sudoku puzzles
-    // I'll be given a game "board" which has some numbers already and some "blanks" rep'd by "."
+    // I'll be given a game "board" which has some numbers already and some "blanks" rep'd by 0
     // QUESTIONS:
       // 1A. WHAT ARE THE RULES FOR SUDOKU?
         // Each horizontal and vertical line must contain  digits 1 - 9
@@ -28,17 +24,22 @@ let puzzle = [
   
     // Test Case 1:
       const board1 = [
-        ['.','.','.','.',2,'.',5,'.',4],
+        [0,0,0,0,2,0,5,0,4],
+        []
         
       ]
   
-  const solveSudoku = () => {
-  
+  const solveSudoku = (board, start) => {
+    const guessHorizontal = (x) => {
+      for(let i = 0; i<board.length; i++) {
+        
+      }
+    }
   }
   
-  console.log(puzzle);
+  console.log(board1);
   
-  console.log(puzzle[1][0]);
+  console.log(board1[1][0]);
   
   ////////////////////////////////////////////////
   // 4. REVIEW AND SEEK ALTERNATIVE SOLUTIONS: //
