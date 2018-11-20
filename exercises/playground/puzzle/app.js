@@ -16,20 +16,31 @@
   //////////////////////
     // I'll create test cases and a function which solves the puzzle.
     // I'll give it the "board" as a two dimensional array
-    // 
+    // I'll find cell's equal to 0, and then start using the process of elimination to make guesses
+    // I will use multiple smaller functions to solve each part of the puzzle.
+      // One function will find the first 0
+      // The next function will check which numbers are missing horizontally
+      // Then a function will check which numbers are missing vertically
+      // Then a function will check which numbers are missing in the cell's 3 x 3 region
   
   /////////////////////////////////////
   // 3. Execute the plan and solve: //
   ///////////////////////////////////
   
     // Test Case 1:
-      const board1 = [
-        [0,0,0,0,2,0,5,0,4],
-        []
-        
+      const easyBoard = [
+        [8,0,0,5,3,0,0,4,0],
+        [9,0,5,0,0,0,2,0,0],
+        [7,0,0,4,1,0,0,0,8],
+        [0,0,2,8,0,6,0,0,0],
+        [0,8,0,0,9,0,0,7,0],
+        [0,0,0,3,0,1,5,0,0],
+        [3,0,0,0,2,8,0,0,5],
+        [0,0,7,0,0,0,8,0,9],
+        [0,1,0,0,6,5,0,0,7]
       ]
   
-  const solveSudoku = (board, start) => {
+  const solveSudoku = (easyBoard, start) => {
     const guessHorizontal = (x) => {
       for(let i = 0; i<board.length; i++) {
         
