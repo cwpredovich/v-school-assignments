@@ -11,6 +11,7 @@ stockRouter.route('/')
     })
     .post((req, res) => {
         const newStock = new Stocks(req.body)
+        console.log(req.body)
         newStock.save((err, newSavedStock) => {
             if (err) return res.status(500).send(err)
             return res.status(201).send(newSavedStock)

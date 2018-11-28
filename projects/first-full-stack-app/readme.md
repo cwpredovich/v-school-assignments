@@ -11,10 +11,10 @@
     // Create `server.js` file as top-level server file 
     // Create `models` and `routes` directories
         // Build models needed for app
-            // models are build as `const carSchema = new mongoose.Schema({})`
+            // models are built as `const carSchema = new mongoose.Schema({})`
             // models are exported as `module.exports = mongoose.model('Car', carSchema)`
         // Develop routes needed for app
-            // routes are build as `const carRouter = express.Router()`
+            // routes are built as `const carRouter = express.Router()`
             // routes are exported as `module.exports = carRouter`
 
 

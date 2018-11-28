@@ -1,21 +1,22 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Home from './components/Home';
+import Buysell from './components/Buysell';
+import Tracker from './components/Tracker';
+import Navbar from './components/Navbar';
+import { Switch, Route, withRouter } from 'react-router-dom';
 
-class App extends Component {
-  render() {
+const App = () => {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+        <div>
+            <Navbar />
+            <Switch>
+                    <Route exact path="/" component={ Home } />
+                    {/* I'm not too sure if the code below is correctly written. */}
+                    <Route path="/buysell" component={ Buysell } />
+                    <Route path="/tracker" component={ Tracker } />
+            </Switch>
+        </div>
     );
-  }
-}
+};
 
-export default App;
+export default withRouter(App);

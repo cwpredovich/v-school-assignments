@@ -5,8 +5,8 @@ const stockSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    numberOfShares: Number,
-    averageCost: Number
+    numberOfShares: String,
+    averageCost: String
 })
 
-module.exports = mongoose.model("Stock", stockSchema)
+module.exports = mongoose.model("Stocks", stockSchema)
