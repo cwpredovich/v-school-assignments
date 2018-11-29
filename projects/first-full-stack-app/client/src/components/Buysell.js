@@ -3,12 +3,13 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import { getQuote, getPortfolio } from '../redux';
 import {API_KEY} from '../Keys';
+import Purchases from './Purchases';
 const stocksURL = "http://localhost:5000/stocks/";
 
 class Buysell extends Component {
 
-    constructor(props){
-        super(props)
+    constructor(){
+        super()
         this.state = {
             symbol: "",
             currentQuote: {},
@@ -53,25 +54,29 @@ class Buysell extends Component {
                 // we have to index the object with slightly different syntax
             })
         })
-        this.setState({
-            symbol: ""
-        })
+        // this.setState({
+        //     symbol: ""
+        // })
         console.log(this.state)
     }
 
-    handleBuy = (e) => {
-        e.preventDefault();
+    handleBuy = () => {
+        // IF I already own shares of this stock
         if (this.state.portfolio.find(obj => obj.symbol === this.state.currentQuote["01. symbol"])) {
+            // THEN find it in my portfolio
             const stockToRepurchaseObj = this.state.portfolio.find(obj => obj.symbol === this.state.currentQuote["01. symbol"])
+            // grab the stocks _id
             const stockIdToRepurchase = stockToRepurchaseObj._id
+            // find out how many I already own
             const prevNumOfShares = stockIdToRepurchase.numberOfShares
-            let newNumOfShares = Number(prevNumOfShares) + Number(this.state.quantity)
-            console.log(stockIdToRepurchase)
+            // add how many shares I want to buy to how many I already own
+            const newNumOfShares = (Number(prevNumOfShares) + Number(this.state.quantity))
+            console.log(newNumOfShares)
             axios.put(`${stocksURL}${stockIdToRepurchase}`, {
                 numberofShares: newNumOfShares
             })
                 .then(response => {
-                    console.log(response)
+                    console.log(response.data)
                 })
                 .catch(err => {
                     console.log(err)
@@ -84,13 +89,24 @@ class Buysell extends Component {
                 averageCost: `${this.state.currentQuote["05. price"]}`
             })
             .then(response => {
-                this.loadPortfolio();
-                console.log(this.state.portfolio)
+                console.log(response.data)
             })
+            this.loadPortfolio();
+            console.log(this.state.portfolio)
 
         }
     }
     
+    // handleSell = () => {}
+
+    handleSellAll = () => {
+        axios.delete(`${stocksURL}${this.state.portfolio.find(obj => obj.symbol === this.state.currentQuote["01. symbol"])._id}`)
+            .then(response => {
+                console.log(response)
+            })
+        this.loadPortfolio();
+        console.log(this.state.portfolio)
+    }
 
     handleClick = clickedSymbol => {
         axios.get(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${clickedSymbol}&apikey=${API_KEY}`).then(response => {
@@ -101,9 +117,6 @@ class Buysell extends Component {
                 // we have to index the object with slightly different syntax
             })
         })
-        this.setState({
-            symbol: ""
-        })
     }
 
     render(){
@@ -111,14 +124,13 @@ class Buysell extends Component {
             <div className="stocksPage">
                 <div className="stocksPageContent">
 
-                    <h1>Stock Seeker</h1>
-                    <p>Use this form to get information about companies listed on the New York Stock Exchange.</p>
+                    <h1>Search, Buy, and Sell</h1>
                     <form onSubmit={this.handleSearchStock}>
                         <input type="text" placeholder="Stock Symbol" name="symbol" value={this.state.symbol} onChange={this.handleSymbolChange} />
                         <button>Get Info</button>
                     </form>
                     <div className="favStocksAndDisplayStocks">
-                        {/* <div className="favStocks">
+                        <div className="favStocks">
                             <h2>Favorite Stocks:</h2>
                                 <ol>
                                     <li onClick={()=> this.handleClick("ADBE")}>Adobe (ADBE)</li>
@@ -133,21 +145,27 @@ class Buysell extends Component {
                                     <li onClick={()=> this.handleClick("FB")}>Facebook (FB)</li>
                                     <li onClick={()=> this.handleClick("NFLX")}>Netflix (NFLX)</li>
                                 </ol>
-                        </div> */}
+                        </div>
                         <div className="displayStocks">
                             <h2>Symbol: {this.state.currentQuote["01. symbol"]}</h2>
+                            
+                            <h4>Price: ${this.state.currentQuote["05. price"]}</h4>
+
                             <form className="buyOrSellStocks">
                                 <input type="number" placeholder="Quantity" name="quantity" value={this.state.buyorsell} onChange={this.handleQuantityChange} />
-                                <button onClick={this.handleBuy}>Buy</button>
-                                <button onClick={this.handleSell}>Sell</button>
                             </form>
-                            <h4>Price: ${this.state.currentQuote["05. price"]}</h4>
+                            <button onClick={this.handleBuy}>Buy</button>
+                            <button onClick={this.handleSell}>Sell</button>
+                            <button onClick={this.handleSellAll}>Sell All of This Stock</button>
+
                             <h4>Latest Trading Day: {this.state.currentQuote["07. latest trading day"]}</h4>
                             <h4>High: {this.state.currentQuote["03. high"]}</h4>
                             <h4>Low: {this.state.currentQuote["04. low"]}</h4>
                             <h4>Percent Change: {this.state.currentQuote["10. change percent"]}</h4>
                         </div>
-
+                        <div className="purchases">
+                            <Purchases {...this.state} />
+                        </div>
                     </div>
                 </div>
             </div>

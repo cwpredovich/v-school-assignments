@@ -58,7 +58,7 @@ body {
 .viewCssAndOtherLinks {
     grid-area: d;
     background-image: url("bamboo.png"), url("contours@2x.png"), url("gridlines.png");
-    height: 866px;
+    height: 878px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
