@@ -31,7 +31,7 @@ switch (operation) {
     case "add":
         console.log(`The result is: ${add(num1, num2)}`);
         break;
-    case "subtract":
+    case "sub":
         console.log(`The result is: ${sub(num1, num2)}`);
         break;
     case "mul":

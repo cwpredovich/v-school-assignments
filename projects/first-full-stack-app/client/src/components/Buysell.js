@@ -29,6 +29,7 @@ class Buysell extends Component {
                     portfolio: response.data
             })
         })
+        console.log(`Here is the current portfolio`)
         console.log(this.state.portfolio)
     }
 
@@ -63,15 +64,15 @@ class Buysell extends Component {
     handleBuy = () => {
         // IF I already own shares of this stock
         if (this.state.portfolio.find(obj => obj.symbol === this.state.currentQuote["01. symbol"])) {
+            console.log(`You are trying to buy ${this.state.quantity} more shares of ${this.state.currentQuote["01. symbol"]}`)
             // THEN find it in my portfolio
             const stockToRepurchaseObj = this.state.portfolio.find(obj => obj.symbol === this.state.currentQuote["01. symbol"])
             // grab the stocks _id
             const stockIdToRepurchase = stockToRepurchaseObj._id
             // find out how many I already own
-            const prevNumOfShares = stockIdToRepurchase.numberOfShares
+            const prevNumOfShares = stockToRepurchaseObj.numberOfShares
             // add how many shares I want to buy to how many I already own
-            const newNumOfShares = (Number(prevNumOfShares) + Number(this.state.quantity))
-            console.log(newNumOfShares)
+            const newNumOfShares = ((Number(prevNumOfShares) + Number(this.state.quantity))).toString()
             axios.put(`${stocksURL}${stockIdToRepurchase}`, {
                 numberofShares: newNumOfShares
             })
@@ -146,13 +147,13 @@ class Buysell extends Component {
                                     <li onClick={()=> this.handleClick("NFLX")}>Netflix (NFLX)</li>
                                 </ol>
                         </div>
-                        <div className="displayStocks">
+                        <div className="displayAndTradeStocks">
                             <h2>Symbol: {this.state.currentQuote["01. symbol"]}</h2>
                             
                             <h4>Price: ${this.state.currentQuote["05. price"]}</h4>
 
                             <form className="buyOrSellStocks">
-                                <input type="number" placeholder="Quantity" name="quantity" value={this.state.buyorsell} onChange={this.handleQuantityChange} />
+                                <input type="number" placeholder="Quantity" name="quantity" value={this.state.quantity} onChange={this.handleQuantityChange} />
                             </form>
                             <button onClick={this.handleBuy}>Buy</button>
                             <button onClick={this.handleSell}>Sell</button>
