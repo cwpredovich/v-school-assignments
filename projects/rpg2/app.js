@@ -277,8 +277,7 @@
       /// Game Intro ////
      ///////////////////
  
- 
- // console.log(`-=-=-=-=-=-= SLC PUNK! =-=-=-=-=-=-`);
+
  
  
                  /* ***************  MUSIC TIME! *************** */
@@ -298,7 +297,7 @@ var themeMusic = sound.play('rpg-soundtrack.mp3', function(err){
 })
  
  
- console.log(`INTRO:  It's Summer 1985. You just finished your junior year of high school in Oakland, CA when your parents decide to pick up and move everyone to Utah. Really, Utah??!! \n Back in the Bay your homies were down, the girlies were fine, you could get anywhere on BART, and Sundays were chill days not church days. \n Utah is going to be a very different beast...\n \n`)
+ console.log(`INTRO:  It's Summer 1985. You just finished your junior year of high school in Oakland, CA when your parents decide to pick up and move everyone to Utah. Why Utah??!! \n Back in the Bay Area your homies were down, the girls were fine, you could get anywhere on BART, and Sundays were chill days not church days. \n Utah is going to be a very different beast...\n \n`)
  
  
  /// Player Name ///
