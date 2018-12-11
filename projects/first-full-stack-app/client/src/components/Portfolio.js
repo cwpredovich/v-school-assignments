@@ -1,16 +1,16 @@
 import React from "react";
 
-const Purchases = (props) => {
+const Portfolio = (props) => {
     return(
         <div>
-            <h2>Purchases:</h2>
+            <h2>Portfolio:</h2>
             <ol>
             {props.portfolio.map(company => 
                 <li>
                     <ul>
                         <li>Company Symbol: {company.symbol}</li>
                         <li># of Share Purchased: {company.numberOfShares}</li>
-                        <li>Purchase Price: {company.averageCost}</li>
+                        <li>Average Price: {company.averageCost}</li>
                     </ul>
                 </li>
             )}
@@ -19,4 +19,4 @@ const Purchases = (props) => {
     )
 }
 
-export default Purchases;
+export default Portfolio;

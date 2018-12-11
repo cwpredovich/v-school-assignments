@@ -3,7 +3,7 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import { getQuote, getPortfolio } from '../redux';
 import {API_KEY} from '../Keys';
-import Purchases from './Purchases';
+import Portfolio from './Portfolio';
 const stocksURL = "http://localhost:5000/stocks/";
 
 class Buysell extends Component {
@@ -74,7 +74,7 @@ class Buysell extends Component {
             // add how many shares I want to buy to how many I already own
             const newNumOfShares = ((Number(prevNumOfShares) + Number(this.state.quantity))).toString()
             axios.put(`${stocksURL}${stockIdToRepurchase}`, {
-                numberofShares: newNumOfShares
+                numberOfShares: newNumOfShares
             })
                 .then(response => {
                     console.log(response.data)
@@ -165,7 +165,7 @@ class Buysell extends Component {
                             <h4>Percent Change: {this.state.currentQuote["10. change percent"]}</h4>
                         </div>
                         <div className="purchases">
-                            <Purchases {...this.state} />
+                            <Portfolio {...this.state} />
                         </div>
                     </div>
                 </div>

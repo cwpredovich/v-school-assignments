@@ -4,10 +4,6 @@
     src: url(verdemoderna.woff);
 }
 
-/* * {
-    border: 1px solid black;
-} */
-
 body {
     margin: 0px;
     color: #325050;
@@ -279,9 +275,11 @@ ul {
 }
 
 .footer {
+    position: relative;
     grid-area: h;
     background: #134347;
     display: flex;
+    align-items: center;
     justify-content: center;
     align-items: center;
     font-family: "verdemoderna", sans-serif;
@@ -290,9 +288,11 @@ ul {
     line-height: 3em;
 }
 
-.footer > a {
+.footer > div {
+    margin-top: -50px;
     margin-left: 40px;
     margin-right: 40px;
+    height: 100%;
 }
 
 .footer > a:visited {
