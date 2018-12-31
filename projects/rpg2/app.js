@@ -22,7 +22,7 @@
   /// Variables ////
  //////////////////
  
- var gameBanner = ` #####  #        #####     ######                       
+ var gameBanner = `  #####  #        #####     ######                       
  #     # #       #     #    #     # #    # #    # #    # 
  #       #       #          #     # #    # ##   # #   #  
   #####  #       #          ######  #    # # #  # ####   
@@ -109,7 +109,7 @@
      isAlive: true,
      inventory: [' skateboard', ' backpack'],
      printInventory: function () {
-         console.log(`Name: ${this.name}, Health: ${this.health}, # of Fights Won: ${this.fightsWon}, Inventory: ${this.inventory}.`);
+         console.log(`\n    Name: ${this.name}\n    Health: ${this.health}\n    # of Fights Won: ${this.fightsWon}\n    Inventory: ${this.inventory}.`);
      },
      attackDmg: function () {
          return Math.floor(Math.random() * 40 + 1)
@@ -117,11 +117,11 @@
  }
  
  
- var gameOptions = ['Walk', 'Check Stash'];
+ var gameOptions = ['Skate', 'Check Stash'];
  
  var ohCrapOptions = ['Fight', 'Try to run'];
  
- var loot = [];
+//  var loot = [];
  
  
    ////////////////////
@@ -161,7 +161,7 @@
    /// Functions ///
   /////////////////
  
- function walk(){
+ function skate(){
     //  console.clear();
      var battleChance = Math.floor(Math.random() * 100 + 1)
      if (battleChance <= 33) {
@@ -169,7 +169,7 @@
          console.log(`\n \n \nDang, ${player.name}! You're in trouble now!`)
          fight();
      } else if (battleChance > 33) {
-         console.log(`\n\nChill. You're still just walking...`)
+         console.log(`\n\nCool. You're still skating...`)
      }
  }
  
@@ -320,7 +320,7 @@ var themeMusic = sound.play('rpg-soundtrack.mp3', function(err){
      var choice = readyUp.keyInSelect(gameOptions, "What do you want to do?\n" )
      switch (choice) {
          case 0:
-             walk()
+             skate()
              break;
          case 1:
              player.printInventory()
@@ -332,7 +332,10 @@ var themeMusic = sound.play('rpg-soundtrack.mp3', function(err){
  console.clear();
  themeMusic.kill();
  sound.play("game-over.mp3");
- console.log(`\nMan, what a drag. You died. At least you managed to win ${player.fightsWon} fight(s)... Better luck next time.`)
- console.log(`\n\n\n\nAll game characters based on real people. However no bums, bad drivers, missionaries, or Macgenxie's were actually hurt in the making of this game.`)
+
+// GAME OVER SCREEN //
+
+ console.log(`\n    Man, what a drag. You died. At least you managed to win ${player.fightsWon} fight(s)... Better luck next time.`)
+ console.log(`\n\n    All game characters based on real people. However no bums, bad drivers, missionaries, or Macgenxie's were actually hurt in the making of this game.\n\n`)
 
  

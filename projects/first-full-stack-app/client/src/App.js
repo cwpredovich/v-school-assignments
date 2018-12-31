@@ -11,7 +11,6 @@ const App = () => {
             <Navbar />
             <Switch>
                     <Route exact path="/" component={ Home } />
-                    {/* I'm not too sure if the code below is correctly written. */}
                     <Route path="/buysell" component={ Buysell } />
                     <Route path="/resources" component={ Resources } />
             </Switch>
