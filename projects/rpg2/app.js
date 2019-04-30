@@ -125,8 +125,9 @@
  
  
    ////////////////////
-  /// Constructor ///
- //////////////////
+  //    Enemy     ////
+ /// Constructor ////
+////////////////////
  
  function Enemy (type, spelling, health, strength, battleCry, primaryAttack, secondaryAttack, demise, gloat, loot, healthGive) {
      this.type = type;
@@ -144,18 +145,6 @@
          return Math.floor(Math.random() * this.strength + 1)
      }
  }
- 
-   ////////////////
-  /// Enemies ////
- ////////////////
- 
- // var lunaticBum = new Enemy('Lunatic Bum', 45, 35, 'spare change?', 'shouts curse words at you', 'stabs you with dirty needle', "(Ranting and speaking nonsense) I'm dying but I don't care. I'll come back as a shopping cart and haunt you forever!", "HA HA HA HA HAAA! (Ranting and speaking nonsense) I told you Operah is the President and she sent you to kill me, but you can't kill me because I ate a gopher once!");
- 
- // var missionaries = new Enemy('Mormon Missionaries', 50, 60, 'Hi! Have you heard of the LDS church?', 'sings choir songs to you', 'shows up late to dinner at your house', "We'll just leave you for the next set of Elders to serve here", "Ready to get baptized?");
- 
- // var mckenzies = new Enemy('Mckenzie', 75, 100, 'Wanna get married??', 'slaps you', 'gets pregnant and refuses a paternity test', 'but our Tinder profiles had so much in common!', "Hold on, let me take a selfie!");
- 
- // var badDrivers = new Enemy('Bad Driver', 80, 100, "Get out of the way! I'm late to the Jazz game!", "Runs red light, pulls a double u-turn, and nearly runs you over!", "Merges across 4 lanes of traffic to make a right turn... DIRECTLY INTO YOU!", "Well, at least I have insurance...", "Hah! Punk kid shouldn't have been on the street anyway!")
  
     /////////////////
    /// Functions ///
@@ -201,14 +190,12 @@
      var enemy = genRandomEnemy();
      if (enemy.type === "Mackenzie") {
          enemy.type = enemy.spelling[Math.floor(Math.random() * enemy.spelling.length)];
-         // for some reason, I had to do Math.random() * 5 rather than Math.random() * enemy.spelling.length
      }
      console.log(`${enemy.type} showed up trying to get you!!! \n ${enemy.type}: "${enemy.battleCry}"`);
      var cannotEscape = true;
      while (player.health > 0 && enemy.health > 0 && cannotEscape){
          var ohCrapChoice = readyUp.keyInSelect(ohCrapOptions, "Fight or try to run?? ")
          if (ohCrapChoice === 0){
-            // themeMusic.kill();
             sound.play('grunting.mp3', function(err){
                 if (err) throw err
                 });
@@ -255,10 +242,10 @@
      var currentEnemy;
      switch (enemyPick) {
          case 0:
-             currentEnemy = new Enemy('Lunatic Bum', '', 40, 15, 'spare change?', 'shouts curse words at you', 'stabs you with dirty needle', "(Ranting and speaking nonsense) I'm dying but I don't care. I'll come back as a shopping cart and haunt you forever!", "HA HA HA HA HAAA! (Ranting and speaking nonsense) I told you Operah is the President and she sent you to kill me, but you can't kill me because I'm a butterfly!", " dirty t-shirt and tuberculosis", 10);
+             currentEnemy = new Enemy('Lunatic Bum', '', 40, 15, 'spare change?', 'shouts curse words at you', 'stabs you with dirty needle', "(Ranting and speaking nonsense) I'm dying but I don't care. I'll come back as a shopping cart and haunt you forever!", "HA HA HA HA HAAA! (Ranting and speaking nonsense) I told you Oprah is the President and she sent you to kill me, but you can't kill me because I'm a pretty butterfly!", " dirty t-shirt and tuberculosis", 10);
              break;
          case 1:
-             currentEnemy = new Enemy('Mormon Missionaries', '', 45, 35, 'Hi! Have you heard of the LDS church?', 'sings choir songs to you', 'shows up late to dinner at your house', "You beat us this time, but we'll just leave you for the next set of Elders to serve here", "Gotcha! Ready to get baptized?", " pass along cards", 50);
+             currentEnemy = new Enemy('Missionaries', '', 45, 35, 'Hi! Have you heard of the LDS church?', 'sings choir songs to you', 'shows up late to dinner at your house', "You beat us this time, but we'll just leave you for the next set of Elders who serve here", "Gotcha! Ready to get baptized?", " pass along cards", 50);
              break;
          case 2:
              currentEnemy = new Enemy('Mackenzie',['MkKenzie', 'Kinzeee', 'Muhckenzey', 'Maken-Z', 'Maquensie'], 50, 30, 'Wanna get married??', 'flirts with your roommates', 'invites you to meet her parents', 'but our Tinder profiles had so much in common! :(', "Hold on, let me take a selfie!", ` best friend's phone number`, 45);
@@ -297,7 +284,7 @@ var themeMusic = sound.play('rpg-soundtrack.mp3', function(err){
 })
  
  
- console.log(`INTRO:  It's Summer 1985. You just finished your junior year of high school in Oakland, CA when your parents decide to pick up and move everyone to Utah. Why Utah??!! \n Back in the Bay Area your homies were down, the girls were fine, you could get anywhere on BART, and Sundays were chill days not church days. \n Utah is going to be a very different beast...\n \n`)
+ console.log(`INTRO:  It's Summer 1985. You just finished your junior year of high school in Oakland, CA when your parents decide to pick up and move everyone to Utah. Why Utah??!! \n Back in the Bay Area your homies were down to skate, the girls were fine, you could get anywhere on BART, and Sundays were chill days not church days. \n Utah is going to be a very different beast...\n \n`)
  
  
  /// Player Name ///
