@@ -26,7 +26,8 @@ class Buysell extends Component {
         axios.get(stocksURL)
             .then(response => {
                 this.setState({
-                    portfolio: response.data
+                    portfolio: response.data,
+                    quantity: ""
             })
         })
         console.log(`Here is the current portfolio`)
@@ -77,12 +78,12 @@ class Buysell extends Component {
                 numberOfShares: newNumOfShares
             })
                 .then(response => {
+                    this.loadPortfolio()
                     console.log(response.data)
                 })
                 .catch(err => {
                     console.log(err)
                 })
-            this.loadPortfolio()
         } else {
             axios.post(stocksURL, 
                 {symbol: `${this.state.currentQuote["01. symbol"]}`,
@@ -90,9 +91,9 @@ class Buysell extends Component {
                 averageCost: `${this.state.currentQuote["05. price"]}`
             })
             .then(response => {
+                this.loadPortfolio();
                 console.log(response.data)
             })
-            this.loadPortfolio();
             console.log(this.state.portfolio)
 
         }
@@ -103,9 +104,9 @@ class Buysell extends Component {
     handleSellAll = () => {
         axios.delete(`${stocksURL}${this.state.portfolio.find(obj => obj.symbol === this.state.currentQuote["01. symbol"])._id}`)
             .then(response => {
+                this.loadPortfolio();
                 console.log(response)
             })
-        this.loadPortfolio();
         console.log(this.state.portfolio)
     }
 
