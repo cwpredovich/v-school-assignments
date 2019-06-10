@@ -7,8 +7,8 @@ const Portfolio = (props) => {
             <ol>
             {props.portfolio.map(company => 
                 <li>
-                    <ul>
-                        <li>Company Symbol: {company.symbol}</li>
+                    <ul className="portfolioList">
+                        <li className="portfolioItemHeader">Company Symbol: {company.symbol}</li>
                         <li># of Share Purchased: {company.numberOfShares}</li>
                         <li>Average Price: {company.averageCost}</li>
                     </ul>

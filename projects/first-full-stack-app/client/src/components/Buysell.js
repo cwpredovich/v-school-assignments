@@ -126,14 +126,14 @@ class Buysell extends Component {
             <div className="stocksPage">
                 <div className="stocksPageContent">
 
-                    <h1>Search, Buy, and Sell</h1>
+                    <h1 className="buySellPageTitle">Buy Low, Sell High, and Keep the Difference.</h1>
                     <form onSubmit={this.handleSearchStock}>
                         <input type="text" placeholder="Stock Symbol" name="symbol" value={this.state.symbol} onChange={this.handleSymbolChange} />
                         <button>Get Info</button>
                     </form>
                     <div className="favStocksAndDisplayStocks">
                         <div className="favStocks">
-                            <h2>Favorite Stocks:</h2>
+                            <div className="favStocksHeader">Favorite Stocks</div>
                                 <ol>
                                     <li onClick={()=> this.handleClick("ADBE")}>Adobe (ADBE)</li>
                                     <li onClick={()=> this.handleClick("CHY")}>Calamos Convertible (CHY)</li>

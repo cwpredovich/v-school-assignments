@@ -8,7 +8,7 @@ const Resources = () => {
                 <div className="wallStImg">
                     <h1 className="resourcesTitle">Resources</h1>
                 </div>
-                <h4 className="italicQuote">"Risk comes from not knowing what your are doing." -Warren Buffet</h4>
+                <h4 className="italicQuote">"Rule number one:  Don't lose money. Rule number two:  See rule number one." -Warren Buffet</h4>
                 <ul className="resourcesList">
                     <li><a href="https://www.investopedia.com/">Investopedia:  A site with a wealth of investing information.</a></li>
                     <li><a href="https://www.bogleheads.org/wiki/Main_Page">Bogle Heads:  Wiki site devoted to the teachings of investment guru John Bogle.</a></li>

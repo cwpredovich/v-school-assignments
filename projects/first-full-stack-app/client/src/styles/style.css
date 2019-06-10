@@ -9,7 +9,7 @@ body {
 .navbar {
     height: 65px;
     color: black;
-    background-color: white;
+    background-color: rgb(59,63,78);
     font-family: 'Cabin', sans-serif;
     font-size: 1.3em;
     display: flex;
@@ -66,11 +66,56 @@ body {
     top: -21px;
 }
 
+.buySellPageTitle {
+    text-align: center;
+    padding-top: 30px;
+    /* font-family: 'Cabin', sans-serif; */
+}
+
+ul > .portfolioList {
+    padding-left: 0px;
+}
+
+li {
+    padding-bottom: 15px;
+    padding-left: 30px;
+}
+
 .favStocksAndDisplayStocks {
     height: 100%;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
+}
+
+.favStocks {
+    border: 3px solid black;
+    margin: 20px;
+}
+
+.favStocks > ol > li {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.favStocksHeader {
+    width: 100%;
+    height: 7%;
+    background-color: rgb(67,158,160);
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.6em;
+}
+
+.portfolioList {
+    padding-left: 0px;
+    list-style-type: none;
+}
+
+.portfolioItemHeader {
+    padding-left: 0px;
+    font-weight: bold;
+    list-style-type: none;
 }
 
 /* .favStocks {
@@ -119,12 +164,12 @@ body {
 }
 
 .navLinks:link {
-    color:black;
+    color:white;
     text-decoration: none;
 }
 
 .navLinks:visited {
-    color:black;
+    color:white;
     text-decoration: none;
 }
 
