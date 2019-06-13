@@ -5,10 +5,13 @@ import Resources from './components/Resources';
 import Navbar from './components/Navbar';
 import { Switch, Route, withRouter } from 'react-router-dom';
 
+
 const App = () => {
     return (
         <div>
-            <Navbar />
+            <div className="stickyBar">
+                <Navbar />
+            </div>
             <Switch>
                     <Route exact path="/" component={ Home } />
                     <Route path="/buysell" component={ Buysell } />

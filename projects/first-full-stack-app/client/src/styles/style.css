@@ -6,14 +6,20 @@ body {
 
 @import url('https://fonts.googleapis.com/css?family=Cabin');
 
+.stickyBar {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
 .navbar {
     height: 65px;
     color: black;
     background-color: rgb(59,63,78);
     font-family: 'Cabin', sans-serif;
-    font-size: 1.3em;
+    font-size: 1.2em;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     margin: 0px;
@@ -21,6 +27,25 @@ body {
     transition-property: all;
     transition-duration: 10s;
     transition-timing-function: ease-in-out;
+}
+
+.navLogoDiv {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 2px;
+}
+.navLogo {
+    height: 65px;
+}
+
+.navSection {
+    position: relative;
+    width: 382px;
+    display: flex;
+    justify-content: space-around;
+    text-transform: uppercase;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Anton');
@@ -174,7 +199,7 @@ li {
 }
 
 .navLinks:hover {
-    border-top: 2px solid black;
+    /* border-top: 2px solid black; */
     border-bottom: 2px solid black;
     /* text-decoration: underline overline; */
 }
