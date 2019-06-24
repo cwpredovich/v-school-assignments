@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { getQuote, getPortfolio } from '../redux';
-import {API_KEY} from '../Keys';
+import { API_KEY } from '../Keys';
 import Portfolio from './Portfolio';
 const stocksURL = "http://localhost:5000/stocks/";
 
@@ -56,9 +56,6 @@ class Buysell extends Component {
                 // we have to index the object with slightly different syntax
             })
         })
-        // this.setState({
-        //     symbol: ""
-        // })
         console.log(this.state)
     }
 

@@ -94,7 +94,6 @@ body {
 .buySellPageTitle {
     text-align: center;
     padding-top: 30px;
-    /* font-family: 'Cabin', sans-serif; */
 }
 
 ul > .portfolioList {
@@ -157,10 +156,6 @@ li {
     position: relative;
 }
 
-/* .resourcesTitle {
-    color: white;
-} */
-
 .resourcesList {
     font-size: 1.4em;
 }
@@ -206,4 +201,59 @@ li {
 
 .italicQuote {
     font-style: italic;
+}
+
+.buySellPage {
+    background-color: rgb(38, 42, 55);
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 3fr 3fr;
+}
+
+.aggregateDisplay {
+    display: grid;
+    grid-template-columns: 225px 225px 225px 225px;
+    grid-column-gap: 10px;
+    height: 110px;
+    width: 100%;
+}
+
+.aggregateBoxes {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    height: 100px;
+    width: 225px;
+    border-radius: 4px;
+}
+
+.aggregateTitle {
+    margin-top: 5px;
+}
+
+.aggregateValue {
+    margin-top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.totalAssets {
+    background-color: rgb(80, 170, 166);
+}
+
+.totalBlankDiv1 {
+    background-color: rgb(23, 140, 251);
+}
+
+.totalBlankDiv2 {
+    background-color: rgb(221, 86, 115);
+}
+
+.totalReturn {
+    background-color: rgb(250, 186, 55);
 }
