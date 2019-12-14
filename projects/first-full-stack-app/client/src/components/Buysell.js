@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { connect } from 'react-redux';
-import { getQuote, getPortfolio } from '../redux';
+// import { connect } from 'react-redux';
+// import { getQuote, getPortfolio } from '../redux';
 import { API_KEY } from '../Keys';
 import Portfolio from './Portfolio';
 const stocksURL = "http://localhost:5000/stocks/";
 
 class Buysell extends Component {
-
     constructor(){
         super()
         this.state = {
@@ -30,8 +29,9 @@ class Buysell extends Component {
                     quantity: ""
             })
         })
-        console.log(`Here is the current portfolio`)
-        console.log(this.state.portfolio)
+            .catch(error => {
+                console.error(error)
+            })
     }
 
     handleSymbolChange = (e) => {
@@ -65,12 +65,14 @@ class Buysell extends Component {
             console.log(`You are trying to buy ${this.state.quantity} more shares of ${this.state.currentQuote["01. symbol"]}`)
             // THEN find it in my portfolio
             const stockToRepurchaseObj = this.state.portfolio.find(obj => obj.symbol === this.state.currentQuote["01. symbol"])
-            // grab the stocks _id
+            // grab the stock's _id
             const stockIdToRepurchase = stockToRepurchaseObj._id
             // find out how many I already own
             const prevNumOfShares = stockToRepurchaseObj.numberOfShares
             // add how many shares I want to buy to how many I already own
             const newNumOfShares = ((Number(prevNumOfShares) + Number(this.state.quantity))).toString()
+            // calculate the new average cost of the shares
+            
             axios.put(`${stocksURL}${stockIdToRepurchase}`, {
                 numberOfShares: newNumOfShares
             })
@@ -119,6 +121,7 @@ class Buysell extends Component {
     }
 
     render(){
+        console.log(this.state.portfolio)
         return (
             <div className="stocksPage">
                 <div className="stocksPageContent">
@@ -174,4 +177,5 @@ class Buysell extends Component {
     }
 }
 
-export default connect(state => state, {getQuote, getPortfolio})(Buysell);
+// export default connect(state => state, {getQuote, getPortfolio})(Buysell);
+export default Buysell;
