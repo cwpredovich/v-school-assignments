@@ -2,7 +2,9 @@ import React from 'react';
 
 const FavStock = (props) => {
     return (
-    <li className="favStock">{props.name}</li>
+        <li className="favStock">
+            {props.name}
+        </li>
     )
 };
 
