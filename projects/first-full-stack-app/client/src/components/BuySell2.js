@@ -1,12 +1,16 @@
-// Components
+/// COMPONENTS ///
+
     // 3 Rows of Components:
+
         // Row 1:  Aggregates
             //   a. Total Assets
             //   b. 
+
         // Row 2:  Tools
             //   a. Search
             //   b. Trade:  Buy or Sell
             //   d. Portfolio
+
         // Row 3:  Favorite Stocks
 import React from "react";
 

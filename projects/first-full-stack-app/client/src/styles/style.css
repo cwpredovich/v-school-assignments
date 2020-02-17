@@ -257,3 +257,7 @@ li {
 .totalReturn {
     background-color: rgb(250, 186, 55);
 }
+
+.favStock {
+    color: white;
+}

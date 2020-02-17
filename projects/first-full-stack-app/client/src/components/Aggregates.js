@@ -6,114 +6,114 @@ import { getQuote, getPortfolio } from '../redux';
 // import Portfolio from './Portfolio';
 const stocksURL = "http://localhost:5000/stocks/";
 
-class Buysell2 extends Component {
-    constructor(){
-        super()
-        this.state = {
-            totalAssets: "",
-            largestHolding: "",
-            portfolioDiversity: "",
-            totalReturn: "",
-            portfolio: []
-        }
-    }
+// class Aggregates extends Component {
+//     constructor(){
+//         super()
+//         this.state = {
+//             totalAssets: "",
+//             largestHolding: "",
+//             portfolioDiversity: "",
+//             totalReturn: "",
+//             portfolio: []
+//         }
+//     }
 
-    componentDidMount(){
-        this.loadPortfolio()
-    }
+//     componentDidMount(){
+//         this.loadPortfolio()
+//     }
 
-    loadPortfolio = () => {
-        axios.get(stocksURL)
-            .then(response => {
-                this.setState({
-                    portfolio: response.data
-                })
-            })
-    }
+//     loadPortfolio = () => {
+//         axios.get(stocksURL)
+//             .then(response => {
+//                 this.setState({
+//                     portfolio: response.data
+//                 })
+//             })
+//     }
 
-    loadAggregates = () => {
+//     loadAggregates = () => {
         
-    }
+//     }
 
-    render(){
-        return (
-            <div className="aggregateDisplay">
-                <div className="aggregateBoxes totalAssets">
-                    <div className="aggregateTitle">
-                        Total Assets
-                    </div>
-                    <div className="aggregateValue">
-                        $20,000
-                    </div>
-                </div>
-                <div className="aggregateBoxes totalBlankDiv1">
-                    <div className="aggregateTitle">
-                        Largest Holding
-                    </div>
-                    <div className="aggregateValue">
-                        AMZN
-                    </div>
-                </div>
-                <div className="aggregateBoxes totalBlankDiv2">
-                    <div className="aggregateTitle">
-                        Portfolio Diversity
-                    </div>
-                    <div className="aggregateValue">
-                        75%
-                    </div>
-                </div>
-                <div className="aggregateBoxes totalReturn">
-                    <div className="aggregateTitle">
-                        Total Return
-                    </div>
-                    <div className="aggregateValue">
-                        +$5,500
-                    </div>
-                </div>
-            </div>
-        )
-    }
-}
-
-export default connect(state => state, {getQuote, getPortfolio})(Buysell2);
-
-// const Aggregates = () => {
-//     return (
-//         <div className="aggregateDisplay">
-//             <div className="aggregateBoxes totalAssets">
-//                 <div className="aggregateTitle">
-//                     Total Assets
+//     render(){
+//         return (
+//             <div className="aggregateDisplay">
+//                 <div className="aggregateBoxes totalAssets">
+//                     <div className="aggregateTitle">
+//                         Total Assets
+//                     </div>
+//                     <div className="aggregateValue">
+//                         $20,000
+//                     </div>
 //                 </div>
-//                 <div className="aggregateValue">
-//                     $20,000
+//                 <div className="aggregateBoxes totalBlankDiv1">
+//                     <div className="aggregateTitle">
+//                         Largest Holding
+//                     </div>
+//                     <div className="aggregateValue">
+//                         AMZN
+//                     </div>
+//                 </div>
+//                 <div className="aggregateBoxes totalBlankDiv2">
+//                     <div className="aggregateTitle">
+//                         Portfolio Diversity
+//                     </div>
+//                     <div className="aggregateValue">
+//                         75%
+//                     </div>
+//                 </div>
+//                 <div className="aggregateBoxes totalReturn">
+//                     <div className="aggregateTitle">
+//                         Total Return
+//                     </div>
+//                     <div className="aggregateValue">
+//                         +$5,500
+//                     </div>
 //                 </div>
 //             </div>
-//             <div className="aggregateBoxes totalBlankDiv1">
-//                 <div className="aggregateTitle">
-//                     Largest Holding
-//                 </div>
-//                 <div className="aggregateValue">
-//                     AMZN
-//                 </div>
-//             </div>
-//             <div className="aggregateBoxes totalBlankDiv2">
-//                 <div className="aggregateTitle">
-//                     Portfolio Diversity
-//                 </div>
-//                 <div className="aggregateValue">
-//                     75%
-//                 </div>
-//             </div>
-//             <div className="aggregateBoxes totalReturn">
-//                 <div className="aggregateTitle">
-//                     Total Return
-//                 </div>
-//                 <div className="aggregateValue">
-//                     +$5,500
-//                 </div>
-//             </div>
-//         </div>
-//     )
+//         )
+//     }
 // }
 
-// export default Aggregates
+// export default connect(state => state, {getQuote, getPortfolio})(Aggregates);
+
+const Aggregates = () => {
+    return (
+        <div className="aggregateDisplay">
+            <div className="aggregateBoxes totalAssets">
+                <div className="aggregateTitle">
+                    Total Assets
+                </div>
+                <div className="aggregateValue">
+                    $20,000
+                </div>
+            </div>
+            <div className="aggregateBoxes totalBlankDiv1">
+                <div className="aggregateTitle">
+                    Largest Holding
+                </div>
+                <div className="aggregateValue">
+                    AMZN
+                </div>
+            </div>
+            <div className="aggregateBoxes totalBlankDiv2">
+                <div className="aggregateTitle">
+                    Portfolio Diversity
+                </div>
+                <div className="aggregateValue">
+                    75%
+                </div>
+            </div>
+            <div className="aggregateBoxes totalReturn">
+                <div className="aggregateTitle">
+                    Total Return
+                </div>
+                <div className="aggregateValue">
+                    +$5,500
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Aggregates
