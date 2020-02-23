@@ -2,7 +2,7 @@ import React from 'react';
 
 const FavStock = (props) => {
     return (
-        <li className="favStock">
+        <li className="favStock" onClick={() => {props.handleClick(props.favStock.symbol)}}>
             {props.name}
         </li>
     )

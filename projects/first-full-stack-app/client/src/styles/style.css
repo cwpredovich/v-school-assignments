@@ -261,3 +261,7 @@ li {
 .favStock {
     color: white;
 }
+
+li:hover {
+    cursor: pointer;
+}
