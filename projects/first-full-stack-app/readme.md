@@ -18,4 +18,4 @@ Tech used for the back-end:  MongoDB, Express, Mongoose.
 
 # Important!
 
-There are currently two versions of the project. The old version, which is functional, makes use of the Buysell.js component. The new version, which is still under development, makes use of the BuySell2.js component. In order to switch between the two versions of the app, you just need to open ./client/src/App.js and comment out the component you wish to use (ie. Buysell.js) and uncomment the component you do not wish to use (ie. BuySell2.js).
+There are currently two versions of the project. The old version, which is functional, makes use of the Buysell.js component. The new version, which is still under development, makes use of the BuySell2.js component. In order to switch between the two versions of the app, you just need to open ./client/src/App.js and comment out the component you do not wish to use (ie. Buysell.js) and uncomment the component you do wish to use (ie. BuySell2.js).
